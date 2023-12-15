@@ -1,30 +1,11 @@
-// Eğitim İçeriği Hakkında Genel Görüşler:
-
-// Bu eğitimden genel olarak memnun kaldınız mı?                                    [Radio Button] | Evet - Eh İşte - Hayır
-// Eğitimin içeriği beklentilerinizi karşıladı mı?                                  [Radio Button] | Evet - Bilemiyorum Altan - Hayır
-// Sunulan bilgilerin güncel ve ilgili olup olmadığı hakkında ne düşünüyorsunuz?    [Radio Button] | Güncel - Güncel Değil
-
-// ##################################################
-
-// Öğretim Yöntemleri ve Sunum:
-
-// Eğitmenin öğretim tarzını nasıl buldunuz? (Ör: açık, anlaşılır, etkileşimli)             [Dropdown] | Olması gerektiği gibi - Bir şeyler anlattı işte - Ben daha iyi anlatırdım
-// Sunulan örnekler ve uygulamalar konuları anlamanıza yardımcı oldu mu?                    [Dropdown] | Yardımcı Oldu - Ay ben bilemedim ama - Hiç dinlemeseydim daha iyiydi
-// Eğitmenin soru-cevap bölümlerini yürütme şeklini nasıl değerlendirirsiniz?               [Dropdown] | Cevap verdi ve anladım - Cevap verdi ama yani hiç anlamadım - Cevap vermese daha iyiydi
-
-// Bireysel Gelişim ve Öğrenme:
-
-// Bu eğitimin JavaScript konusundaki bilginizi ve becerinizi nasıl etkilediğini düşünüyorsunuz?    [Input]
-// Eğitimden aldığınız bilgileri pratikte uygulama imkanınız oldu mu?                               [Input]
-
-// Yorum
-// Eğitim hakkında ekstra belirtmek istediğiz bir şey var mı?                                       [Textarea]
-
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+const cors = require("cors");
 
 const app = express();
+
+app.use(cors());
 app.use(bodyParser.json());
 
 // MongoDB bağlantısı
